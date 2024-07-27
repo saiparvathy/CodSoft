@@ -13,7 +13,7 @@ def generate_password_with_length(target_length):
 
     return random_password
 def main():
-    target_length=input("Enter the length for password":)
+    target_length=input("Enter the length for password:")
     if target_length.isdigit():
         target_length=int(target_length)
         if target_length <1:
@@ -25,5 +25,5 @@ def main():
     password=generate_password_with_length
 
     print("Generated password",password)
-    
+
 main()
