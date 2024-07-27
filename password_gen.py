@@ -6,10 +6,10 @@ def generate_password_with_length(target_length):
     uppercase_letters=string.ascii_uppercase
     all_characters=string.ascii_letters+string.digits+string.punctuation
 
-    first_character=string.ascii_uppercase
+    first_char=random.choice(uppercase_letters)
     remaining_length=target_length-1
-    remaining_password=''.joion(random.choice(all_characters) for _ in range(remaining_length))
-    random_password=first_character+remaining_password
+    remaining_password=''.join(random.choice(all_characters) for _ in range(remaining_length))
+    random_password=first_char+remaining_password
 
     return random_password
 def main():
@@ -22,7 +22,7 @@ def main():
     else:
         print("invalid input please enter a positive integer.")
         return 
-    password=generate_password_with_length
+    password=generate_password_with_length(target_length)
 
     print("Generated password",password)
 
